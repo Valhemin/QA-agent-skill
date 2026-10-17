@@ -1,0 +1,4 @@
+# Bảng test case: 2 QA thêm case ở cuối bảng cùng lúc thì git tự nối cả hai,
+# thay vì báo xung đột. Vẫn cần người xem lại nếu hai bên sửa CÙNG một dòng.
+testcases/*.md merge=union
+requirements/*.md merge=union

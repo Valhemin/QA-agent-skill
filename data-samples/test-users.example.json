@@ -1,0 +1,41 @@
+{
+  "_huongdan": "TEMPLATE — copy to test-users.json, fill in real accounts. The real file is NOT committed (gitignored). QA sends account list → AI adds them to the real file following this structure.",
+
+  "web": {
+    "_note": "Main web app — https://app.example.com",
+    "mac-dinh": {
+      "email": "FILL_IN",
+      "password": "FILL_IN",
+      "ghichu": "Default shared account — features without a specific account fall back to this one"
+    },
+    "buyer": {
+      "email": "FILL_IN",
+      "password": "FILL_IN",
+      "ghichu": "Regular buyer account, used for cart/checkout flows"
+    },
+    "locked-account": {
+      "email": "FILL_IN",
+      "password": "FILL_IN",
+      "ghichu": "Account in locked state — used to test account-lock edge cases"
+    }
+  },
+
+  "admin": {
+    "_note": "Admin dashboard — https://admin.example.com. Has its own /login page, separate from the web app.",
+    "mac-dinh": {
+      "email": "FILL_IN",
+      "password": "FILL_IN",
+      "ghichu": "Default admin account"
+    }
+  },
+
+  "affiliate": {
+    "_note": "Affiliate has no login form — log in on web first, shared-domain cookie carries over. See knowledge/affiliate.md."
+  },
+
+  "invalidData": {
+    "wrongPassword": "wrong-password-123",
+    "malformedEmail": "not-an-email",
+    "nonExistentEmail": "does-not-exist-999@example.test"
+  }
+}

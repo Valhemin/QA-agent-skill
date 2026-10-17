@@ -1,0 +1,21 @@
+{
+  "_huongdan": "Declares the project's systems. Adding a new feature does NOT require editing this file — just create testcases/<system>/<feature>.md, scripts auto-scan to figure out which system a feature belongs to.",
+  "heThong": {
+    "web": {
+      "url": "https://app.example.com",
+      "moTa": "Main shopping web app — root system, log in here first before affiliate"
+    },
+    "admin": {
+      "url": "https://admin.example.com",
+      "moTa": "Admin dashboard"
+    },
+    "affiliate": {
+      "url": "https://affiliate.example.com",
+      "moTa": "Affiliate — no login form, receives token via shared-domain cookie"
+    }
+  },
+  "googleSheets": {
+    "spreadsheetId": "<YOUR_SPREADSHEET_ID>",
+    "templateSheetName": "Template"
+  }
+}

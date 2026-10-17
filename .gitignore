@@ -1,0 +1,44 @@
+node_modules/
+
+# --- Output khi chạy test ---
+# Mọi thứ gom vào reports/ (xem outputDir trong playwright.config.ts)
+reports/
+# Thư mục mặc định của Playwright — chỉ sinh ra nếu chạy với config khác
+test-results/
+playwright-report/
+blob-report/
+.last-run.json
+
+# Nháp của agent planner — bản chính thức nằm ở testcases/
+specs/*
+!specs/README.md
+
+# Log + snapshot MCP server của Playwright khi agent khảo sát UI thật — máy tạm, không chia sẻ
+.playwright-mcp/
+
+# --- Thông tin riêng, KHÔNG commit ---
+# Tài khoản test thật — dùng data/test-users.example.json làm mẫu
+data/test-users.json
+
+# Secret cho API gọi mid-test, tạo khi QA gửi curl có key cần dùng
+# (xem .claude/rules/writing-tests.md → "Gọi API trong thân test")
+data/api-keys.json
+
+# Service account key cho Google Sheets sync — tải từ Google Cloud Console
+# (xem docs/superpowers/specs/2026-10-16-google-sheets-sync-design.md)
+data/google-credentials.json
+
+# --- Ghi đè ~/.gitignore_global ---
+# Global gitignore của máy đang loại .claude/* và CLAUDE.md.
+# Với repo này, lớp AI (rules/skills/commands/agents) LÀ sản phẩm và phải chia sẻ
+# cho cả team, nên bắt buộc đưa lại vào git.
+!.claude/
+!.claude/**
+!CLAUDE.md
+!.cursor/
+!.cursor/**
+
+# Riêng từng máy, không chia sẻ
+.claude/settings.local.json
+.claude/projects/
+.cursor/mcp.json
